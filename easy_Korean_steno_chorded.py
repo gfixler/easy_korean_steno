@@ -1,5 +1,3 @@
-# You need to use this with the Korean keyboard layout on your computer enabled
-
 import re
 
 LONGEST_KEY = 1
