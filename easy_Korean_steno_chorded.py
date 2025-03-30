@@ -125,7 +125,8 @@ def lookup(chord):
 
     # backspacing
     if stroke == "*":
-        return "{#left}{#right}{#backspace}"
+        raise KeyError
+        # return "{#left}{#right}{#backspace}"
 
     # the regex decomposes a stroke into the following groups/variables:
     # start consonants               #STKPWHR
