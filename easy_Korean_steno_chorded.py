@@ -86,6 +86,8 @@ y_vowels = {
 ending_consonants = {
     "": 0,  # empty
     "G": 1,  # ㄱ
+    "GT": 2,  # ㄲ
+    "GZ": 2,  # ㄲ
     "PB": 4,  # ㄴ
     "D": 7,  # ㄷ
     "R": 8,  # ㄹ
@@ -93,6 +95,8 @@ ending_consonants = {
     "PL": 16,  # ㅁ
     "B": 17,  # ㅂ
     "S": 19,  # ㅅ
+    "SZ": 20,  # ㅆ
+    "TS": 20,  # ㅆ
     "PBG": 21,  # ㅇ
     "PBLG": 22,  # ㅈ
     "FP": 23,  # ㅊ
@@ -100,13 +104,6 @@ ending_consonants = {
     "T": 25,  # ㅌ
     "P": 26,  # ㅍ
     "F": 27,  # ㅎ
-    # tense consonants (add -R)
-    "RG": 0,  # ㄲ
-    "RD": 0,  # ㄸ
-    "RB": 0,  # ㅃ
-    "RPBLG": 0,  # ㅉ
-    "RS": 0,  # ㅆ
-    "Z": 0,  # ㅆ
 }
 
 
