@@ -5,16 +5,17 @@ LONGEST_KEY = 1
 # list of keys for consonants and vowels
 starting_consonants = {
     "regular": {
-        # consonants
         "K": 0,  # ㄱ
         "TKPW": 0,  # ㄱ
         "TPH": 2,  # ㄴ
         "TK": 3,  # ㄷ
+        "TH": 4,  # ㄸ
         "R": 5,  # ㄹ
         "HR": 5,  # ㄹ
         "PH": 6,  # ㅁ
         "PW": 7,  # ㅂ
         "S": 9,  # ㅅ
+        "": 11,  # ㅇ
         "W": 11,  # ㅇ
         "SKWR": 12,  # ㅈ
         "KH": 14,  # ㅊ
@@ -22,9 +23,6 @@ starting_consonants = {
         "T": 16,  # ㅌ
         "P": 17,  # ㅍ
         "H": 18,  # ㅎ
-        # extra
-        "TH": 4,  # ㄸ
-        "": 11,  # ㅇ
     },
     "tense": {
         # tense consonants (add *)
@@ -32,8 +30,8 @@ starting_consonants = {
         "TKPW": 1,  # ㄲ
         "TK": 4,  # ㄸ
         "PW": 8,  # ㅃ
-        "SKWR": 13,  # ㅉ
         "S": 10,  # ㅆ
+        "SKWR": 13,  # ㅉ
     },
     "special": {
         # adds "y" to vowels
@@ -57,40 +55,36 @@ starting_consonants = {
     },
 }
 vowels = {
-    # vowels
+    "": 0,  # empty
     "A": 0,  # ㅏ
+    "AEU": 1,  # ㅐ
     "U": 4,  # ㅓ
+    "AE": 5,  # ㅔ
     "O": 8,  # ㅗ
+    "OU": 9,  # ㅘ
+    "OEU": 11,  # ㅚ
     "AO": 13,  # ㅜ
+    "AOU": 14,  # ㅝ
+    "AOEU": 16,  # ㅟ
     "AOU": 18,  # ㅡ
     "AU": 18,  # ㅡ
-    "EU": 20,  # ㅣ
-    # complex vowels
-    "AEU": 1,  # ㅐ
-    "AE": 5,  # ㅔ
-    # extra/compound
     "E": 19,  # ㅢ
-    "OEU": 11,  # ㅚ
-    "AOU": 14,  # ㅝ
-    "OU": 9,  # ㅘ
-    "AOEU": 16,  # ㅟ
-    "": 0,  # empty
+    "EU": 20,  # ㅣ
 }
 y_vowels = {
-    # "y" vowels
+    "": 0,  # empty
     "A": 2,  # ㅑ
+    "AEU": 3,  # ㅒ
     "U": 6,  # ㅕ
+    "AE": 7,  # ㅖ
     "O": 12,  # ㅛ
     "OE": 12,  # ㅛ
     "AOU": 17,  # ㅠ
     "AO": 17,  # ㅠ
-    "AEU": 3,  # ㅒ
-    "AE": 7,  # ㅖ
     "EU": 20,  # ㅣ
-    "": 0,  # empty
 }
 ending_consonants = {
-    # consonants
+    "": 0,  # empty
     "G": 1,  # ㄱ
     "PB": 4,  # ㄴ
     "D": 7,  # ㄷ
@@ -113,7 +107,6 @@ ending_consonants = {
     "RPBLG": 0,  # ㅉ
     "RS": 0,  # ㅆ
     "Z": 0,  # ㅆ
-    "": 0,  # empty
 }
 
 
