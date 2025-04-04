@@ -4,7 +4,6 @@ LONGEST_KEY = 1
 
 
 starting_consonants_regular = {
-    "":         (0, None),
     "K":        (0, "ㄱ"),
     "TKPW":     (0, "ㄱ"),
     "TPH":      (2, "ㄴ"),
@@ -71,7 +70,6 @@ vowels = {
     "AOU":     (14, "ㅝ"),
     # "":        (15, "ㅞ"), # out of vowel chords!
     "AOEU":    (16, "ㅟ"),
-    "AOU":     (18, "ㅡ"),
     "AU":      (18, "ㅡ"),
     "E":       (19, "ㅢ"),
     "EU":      (20, "ㅣ"),
