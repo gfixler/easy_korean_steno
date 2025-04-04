@@ -4,6 +4,7 @@ LONGEST_KEY = 1
 
 
 starting_consonants_regular = {
+    "":         (0, None),
     "K":        (0, "ㄱ"),
     "TKPW":     (0, "ㄱ"),
     "TPH":      (2, "ㄴ"),
@@ -174,16 +175,12 @@ def lookup(chord):
     vowel = vowel1 + vowel2
     if vowel not in vowels and vowel not in y_vowels:
         raise KeyError
-    if start_consonant in starting_consonants_special and not vowel:
-        raise KeyError
+    # if start_consonant in starting_consonants_special and not vowel:
+    #     raise KeyError
     if add_y:
         vowel_offset, vowel_final = y_vowels[vowel]
     else:
         vowel_offset, vowel_final = vowels[vowel]
-
-    # only vowel output using *
-    if stress == "*" and start_consonant == 0:
-        start_final = 0
 
     # get end consonant
     if end_consonant not in ending_consonants:
@@ -192,6 +189,20 @@ def lookup(chord):
     if end_consonant == 0 and start_consonant == 0:
         start_final = 0
     end_offset, end_final = ending_consonants[end_consonant]
+
+    # output single letter if only one is pressed
+    letter = None
+    if start_consonant and not vowel and not end_consonant:
+        letter = start_final
+    elif vowel and not start_consonant and not end_consonant:
+        if stress == "*":
+            _, letter = y_vowels[vowel]
+        else:
+            letter = vowel_final
+    elif end_consonant and not start_consonant and not end_consonant:
+        letter = end_final
+    if letter is not None:
+        return "{^}" + letter + "{^}"
 
     # combine output
     hangul_offset = 44032
