@@ -197,7 +197,7 @@ def lookup(chord):
             _, letter = y_vowels[vowel]
         else:
             letter = vowel_final
-    elif end_consonant and not start_consonant and not end_consonant:
+    elif end_consonant and not start_consonant and not vowel:
         letter = end_final
     if letter is not None:
         return "{^}" + letter + "{^}"
