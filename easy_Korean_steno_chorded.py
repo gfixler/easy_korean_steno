@@ -57,6 +57,17 @@ starting_consonants_special = {
     "WH":      (18, "ㅎ"),
 }
 
+# tense consonants (add *)
+starting_consonants_tense_special = {
+    "KW":       (1, "ㄲ"),
+    "TKPWR":    (1, "ㄲ"),
+    "TKW":      (4, "ㄸ"),
+    "TWH":      (4, "ㄸ"),
+    "KPWR":     (8, "ㅃ"),
+    "SH":      (10, "ㅆ"),
+    "SKW":     (13, "ㅉ"),
+}
+
 vowels = {
     "":         (0, None),
     "A":        (0, "ㅏ"),
@@ -161,7 +172,10 @@ def lookup(chord):
     # get start consonant
     add_y = False
     # detect stress
-    if stress == "*" and start_consonant in starting_consonants_tense:
+    if stress == "*" and start_consonant in starting_consonants_tense_special:
+        add_y = True
+        start_offset, start_final = starting_consonants_tense_special[start_consonant]
+    elif stress == "*" and start_consonant in starting_consonants_tense:
         start_offset, start_final = starting_consonants_tense[start_consonant]
     elif start_consonant in starting_consonants_regular:
         start_offset, start_final = starting_consonants_regular[start_consonant]
