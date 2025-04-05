@@ -224,4 +224,4 @@ def lookup(chord):
     medial = vowel_offset * 28
     final = end_offset
     code_point = hangul_offset + initial + medial + final
-    return "{^}" + chr(code_point) + "{^}"
+    return "{&" + chr(code_point) + "}"
